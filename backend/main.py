@@ -26,6 +26,11 @@ def get_video_id(url):
     else:
         return None
 
+
+@app.route('/', methods=['GET'])
+def home():
+    return 'Hello, Welcome to recommendation app!'
+
 @app.route("/", methods=['POST'])
 def process_youtube_link():
     data = request.json
